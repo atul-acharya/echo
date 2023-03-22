@@ -62,3 +62,7 @@ curl localhost:8080/echo/12345
 ```
 
 receives expected response `/echo/12345`.
+
+### Solution
+
+Change `localhost` to `0.0.0.0`, as described [here](https://stackoverflow.com/a/67311644/840031).

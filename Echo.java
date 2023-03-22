@@ -10,7 +10,7 @@ import static java.util.concurrent.Executors.newFixedThreadPool;
 public class Echo {
 
     public static void main(String[] args) throws IOException {
-        final var httpServer = create(new InetSocketAddress("localhost", 8080), 0);
+        final var httpServer = create(new InetSocketAddress("0.0.0.0", 8080), 0);
 
         httpServer.createContext("/echo", new EchoHandler());
         httpServer.setExecutor(newFixedThreadPool(10));
